@@ -16,16 +16,14 @@ public class Solution {
         int count = 0;
         int space = 0;
         int i;
-        double result;
-        DecimalFormat format = new DecimalFormat("#,##");
+
 
         while (fileInputStream.available() > 0) {
             i = fileInputStream.read();
             count++;
             if (i == 32) space++;
         }
-        result = (double) space/count * 100;
-        System.out.printf("%.2f", result);
+        System.out.printf("%.2f", (double) space/count * 100);
         fileInputStream.close();
     }
 }
